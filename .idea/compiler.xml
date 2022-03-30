@@ -8,14 +8,17 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="MyBatisPlus_demo1" />
+        <module name="FastAutoGenerator" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="FastAutoGenerator" target="1.8" />
       <module name="MyBatisPlus_demo1" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="FastAutoGenerator" options="-parameters" />
       <module name="MyBatisPlus_demo1" options="-parameters" />
     </option>
   </component>

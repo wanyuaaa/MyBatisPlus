@@ -6,4 +6,12 @@
 <!--    <select id="selectMapById" resultType="map">-->
 <!--        select id,name,age,email from user where id = #{id}-->
 <!--    </select>-->
+
+    <!--SQL片段，记录基础字段-->
+    <sql id="BaseColumns">id,user_name,age,email</sql>
+    <!--IPage<User> selectPageVo(Page<User> page, Integer age);-->
+    <select id="selectPageVo" resultType="User">
+        SELECT <include refid="BaseColumns"/> FROM t_user WHERE age > #{age}
+    </select>
+
 </mapper>

@@ -1,5 +1,8 @@
 package com.demo.mybatisplus_demo1;
 
+import com.baomidou.mybatisplus.generator.FastAutoGenerator;
+import com.baomidou.mybatisplus.generator.config.OutputFile;
+import com.baomidou.mybatisplus.generator.engine.FreemarkerTemplateEngine;
 import com.demo.mybatisplus_demo1.pojo.User;
 import com.demo.mybatisplus_demo1.service.impl.UserService;
 import org.junit.jupiter.api.Test;
@@ -8,6 +11,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import java.sql.Wrapper;
 import java.util.ArrayList;
+import java.util.Collections;
 
 /**
  * @author wanyu

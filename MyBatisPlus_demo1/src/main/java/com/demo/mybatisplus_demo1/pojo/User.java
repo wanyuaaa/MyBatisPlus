@@ -1,6 +1,7 @@
 package com.demo.mybatisplus_demo1.pojo;
 
 import com.baomidou.mybatisplus.annotation.*;
+import com.demo.mybatisplus_demo1.enums.SexEnum;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -15,13 +16,15 @@ import org.springframework.boot.context.properties.ConstructorBinding;
 public class User {
 
     //属性对应的字段作为主键,自增，默认雪花ASSIGN_ID/无视递增
-    @TableId(value = "id"/*,type = IdType.AUTO*/)
+    @TableId(value = "id")
     private Long uid;
 
     @TableField("user_name")
     private String name;
 
     private Integer age;
+
+    private SexEnum sex;
 
     private String email;
 
